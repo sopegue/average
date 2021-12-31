@@ -11,7 +11,7 @@ export default {
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://sopegue.netlify.app/',
+        content: 'https://mes-moyennes.netlify.app/',
       },
       {
         hid: 'og:title',
@@ -31,24 +31,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://sopegue.netlify.app/enjoy.png',
-      },
-    ],
-    script: [
-      {
-        src: 'https://kit.fontawesome.com/6ce9431069.js',
-        crossorigin: 'anonymous',
-      },
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css?family=Indie+Flower',
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css',
+        content: 'https://mes-moyennes.netlify.app/enjoy.png',
       },
     ],
   },
