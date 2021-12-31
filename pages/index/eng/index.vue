@@ -1,13 +1,13 @@
 <template>
   <div class="w-full h-full border rounded">
-    <fr></fr>
+    <en></en>
   </div>
 </template>
 
 <script>
-import Fr from '~/components/Fr.vue'
+import En from '~/components/En.vue'
 export default {
-  components: { Fr },
+  components: { En },
 }
 </script>
 

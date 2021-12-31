@@ -3,10 +3,10 @@
     <div v-show="loading" class="w-0 h-0"></div>
     <div v-show="!loading" class="mx-auto w-full h-full">
       <Header class="sticky top-0 bg-mybg" />
-      <div class="px-5 py-10 lg:w-2/3 md:w-3/4 w-full mx-auto">
+      <div class="px-5 py-10 lg:w-2/3 md:w-3/4 w-full mx-auto mb-24">
         <nuxt-child />
       </div>
-      <Footer class="sticky w-full bottom-0 bg-mybg" />
+      <Footer class="fixed w-full h-24 bottom-0 bg-mybg" />
     </div>
   </div>
 </template>
