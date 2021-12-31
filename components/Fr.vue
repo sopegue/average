@@ -491,9 +491,6 @@ export default {
         this.cookies.setCookie('subj', this.mats, 365)
       }, 0)
     },
-    add() {},
-    remove() {},
-    modify(index, subject, coeff) {},
   },
 }
 </script>
