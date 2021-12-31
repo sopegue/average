@@ -437,9 +437,11 @@ export default {
         let somme = 0
         let finish = false
         let coefs = 0
-        this.mats[3].forEach((x) => {
-          coefs += +x.coef
-        })
+        for (let index = 0; index < this.mats[3].length; index++) {
+          const element = this.mats[3][index]
+          coefs += +element.coef
+        }
+
         for (let index = 0; index < this.mats[3].length; index++) {
           const element = this.mats[3][index]
           if (!finish) {
@@ -460,7 +462,7 @@ export default {
                   this.mats[3][index].note = last.toFixed(2).toString()
                   finish = true
                 } else {
-                  index = 0
+                  index = -1
                   somme = 0
                 }
               } else this.mats[3][index].note = element.note
@@ -475,6 +477,7 @@ export default {
             }
           }
         }
+
         setTimeout(() => {
           this.ressource = false
         }, 1000)
