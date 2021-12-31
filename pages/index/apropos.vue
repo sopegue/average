@@ -4,7 +4,7 @@
     <p class="py-5">
       Tu as besoin de savoir l'origine de ta moyenne ? Tu as juste à fournir ta
       moyenne générale, le nombre de matière et leurs coefficients respectifs.
-      C'est fait, tu as trouvé l'origine de votre moyenne.
+      C'est fait, tu as trouvé l'origine de ta moyenne.
     </p>
   </div>
 </template>
