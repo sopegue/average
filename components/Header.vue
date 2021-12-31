@@ -14,7 +14,7 @@
           >
         </a>
       </div>
-      <div class="flex items-center space-x-6">
+      <!-- <div class="flex items-center space-x-6">
         <div v-for="(lan, i) in lang" :key="i">
           <a
             class="flex items-center space-x-2 cursor-pointer"
@@ -25,7 +25,7 @@
             <span class="text-xs">{{ lan.name }}</span>
           </a>
         </div>
-      </div>
+      </div> -->
     </nav>
   </div>
 </template>
