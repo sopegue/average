@@ -2,7 +2,10 @@
   <div class="px-5 py-5 w-full">
     <div class="flex flex-col space-y-8">
       <div class="flex justify-center font-semibold border-b pb-3">
-        <span class="text-center">Simuler l'origine de ma moyenne</span>
+        <span v-if="!$route.path.includes('/eng')" class="text-center"
+          >Simuler l'origine de ma moyenne</span
+        >
+        <span v-else class="text-center">Simulate my average's origin</span>
       </div>
       <div
         v-if="!hasData"
@@ -12,7 +15,10 @@
           <div class="flex w-fit mx-auto items-center flex-col space-y-3">
             <div class="flex space-x-3">
               <div class="flex flex-col space-y-2 items-center">
-                <span class="w-fit text-sm">Ma moyenne</span>
+                <span v-if="!$route.path.includes('/eng')" class="w-fit text-sm"
+                  >Ma moyenne</span
+                >
+                <span v-else class="w-fit text-sm">My average</span>
                 <input
                   v-model="avg"
                   type="text"
@@ -24,7 +30,10 @@
               </div>
               <p class="w-fit text-sm block relative mt-9">/</p>
               <div class="flex flex-col space-y-2 items-center">
-                <span class="w-fit text-sm">Totale</span>
+                <span v-if="!$route.path.includes('/eng')" class="w-fit text-sm"
+                  >Totale</span
+                >
+                <span v-else class="w-fit text-sm">Total</span>
                 <input
                   v-model="total"
                   type="text"
@@ -39,7 +48,10 @@
           <div
             class="flex w-fit mx-auto items-center flex-col space-y-3 justify-center self-start"
           >
-            <span class="w-fit text-sm">Nombre de matière(s)</span>
+            <span v-if="!$route.path.includes('/eng')" class="w-fit text-sm"
+              >Nombre de matière(s)</span
+            >
+            <span v-else class="w-fit text-sm">Number of subject(s)</span>
             <div class="w-fit flex items-center space-x-3">
               <button @click="retract">
                 <svg
@@ -84,7 +96,8 @@
           class="h-8 bg-green-50 font-semibold text-black hover:bg-green-200 w-full rounded p-1 text-sm"
           @click="set"
         >
-          Continuer
+          <span v-if="!$route.path.includes('/eng')">Continuer</span>
+          <span v-else>Continue</span>
         </button>
       </div>
       <div
@@ -95,11 +108,17 @@
           class="flex sm:flex-row flex-col sm:space-x-10 sm:space-y-0 space-y-6"
         >
           <div class="flex flex-col space-y-2 items-center">
-            <span class="w-fit text-sm">Ma moyenne</span>
+            <span v-if="!$route.path.includes('/eng')" class="w-fit text-sm"
+              >Ma moyenne</span
+            >
+            <span v-else class="w-fit text-sm">My average</span>
             <span class="font-semibold">{{ average }}/{{ tot }}</span>
           </div>
           <div class="flex flex-col space-y-2 items-center">
-            <span class="w-fit text-sm">Nombre de matière(s)</span>
+            <span v-if="!$route.path.includes('/eng')" class="w-fit text-sm"
+              >Nombre de matière(s)</span
+            >
+            <span v-else class="w-fit text-sm">Number of subject(s)</span>
             <span class="font-semibold">{{ nbr }}</span>
           </div>
         </div>
@@ -107,7 +126,8 @@
           class="font-semibold bg-red-600 text-black hover:bg-red-700 text-white sm:w-50 w-full block h-8 rounded p-1 text-sm font-semibold"
           @click="noData"
         >
-          Recommencer
+          <span v-if="!$route.path.includes('/eng')">Recommencer</span>
+          <span v-else>Re-try</span>
         </button>
       </div>
     </div>
@@ -117,7 +137,10 @@
           class="w-fulls flex sm:flex-row flex-col sm:space-y-0 space-y-5 sm:space-x-15"
         >
           <div class="w-fulls flex flex-col space-y-1">
-            <span class="text-sm italic">Matière {{ i + 1 }}</span>
+            <span v-if="!$route.path.includes('/eng')" class="text-sm italic"
+              >Matière {{ i + 1 }}</span
+            >
+            <span v-else class="text-sm italic">Subject {{ i + 1 }}</span>
             <input
               v-show="subjected && current === i"
               :id="'subjected' + i"
@@ -139,14 +162,20 @@
           </div>
           <div class="sm:w-56 flex space-x-6">
             <div class="flex flex-col space-y-2 items-center">
-              <span class="text-sm italic">Note</span>
+              <span v-if="!$route.path.includes('/eng')" class="text-sm italic"
+                >Note</span
+              >
+              <span v-else class="text-sm italic">Mark</span>
               <span class="text-sm font-semibold"
                 >{{ mats[3][i].note === '' ? '??' : mats[3][i].note }} /
                 {{ tot }}</span
               >
             </div>
             <div class="flex flex-col space-y-2 items-center">
-              <span class="text-sm italic">Coef.</span>
+              <span v-if="!$route.path.includes('/eng')" class="text-sm italic"
+                >Coef.</span
+              >
+              <span v-else class="text-sm italic">Factor</span>
               <input
                 :id="'coef' + i"
                 v-model="matieres[3][i].coef"
@@ -164,13 +193,17 @@
         v-if="loading"
         class="flex justify-center font-semibold text-sm py-2"
       >
-        <span class="text-center">Calcul en cours...</span>
+        <span v-if="!$route.path.includes('/eng')" class="text-center"
+          >Calcul en cours...</span
+        >
+        <span v-else class="text-center">Operation in progress...</span>
       </div>
       <button
         class="bg-green-50 font-semibold text-black hover:bg-green-200 w-full rounded p-1 h-8 text-sm"
         @click="simulate"
       >
-        Simuler mes moyennes
+        <span v-if="!$route.path.includes('/eng')">Simuler mes moyennes</span>
+        <span v-else>Simulate my averages</span>
       </button>
     </div>
   </div>
