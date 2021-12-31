@@ -2,7 +2,7 @@
   <div class="z-50 w-full border-b">
     <nav class="flex items-center px-6 py-3 justify-between">
       <div>
-        <a v-if="!$route.path.includes('/eng')" href="/">
+        <nuxt-link v-if="!$route.path.includes('/eng')" to="/">
           <span class="font-bold text-xl indie hidden sm:block">
             POURQUOI MA MOYENNE ?</span
           >
@@ -12,8 +12,8 @@
           >
             PMM ?</span
           >
-        </a>
-        <a v-else href="/eng">
+        </nuxt-link>
+        <nuxt-link v-else to="/eng">
           <span class="font-bold text-xl indie hidden sm:block">
             WHY MY AVERAGE ?</span
           >
@@ -23,27 +23,27 @@
           >
             WMA ?</span
           >
-        </a>
+        </nuxt-link>
       </div>
       <div class="flex items-center space-x-6">
-        <a
+        <nuxt-link
           v-if="!$route.path.includes('/eng')"
           class="flex items-center space-x-2 cursor-pointer"
-          :href="$route.path.includes('apropos') ? '/eng/about' : '/eng'"
+          :to="$route.path.includes('apropos') ? '/eng/about' : '/eng'"
           title="English"
         >
           <img class="rounded-full w-5 h-5" src="/assets/svg/icon-uk.svg" />
           <span class="text-xs">En</span>
-        </a>
-        <a
+        </nuxt-link>
+        <nuxt-link
           v-else
           class="flex items-center space-x-2 cursor-pointer"
-          :href="$route.path.includes('about') ? '/apropos' : '/'"
+          :to="$route.path.includes('about') ? '/apropos' : '/'"
           title="Français"
         >
           <img class="rounded-full w-5 h-5" src="/assets/svg/icon-fr.svg" />
           <span class="text-xs">Fr</span>
-        </a>
+        </nuxt-link>
       </div>
     </nav>
   </div>

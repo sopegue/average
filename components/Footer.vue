@@ -2,18 +2,19 @@
   <div class="px-5 border-t py-3">
     <div class="flex flex-col space-y-2 items-center justify-center">
       <span class="col-white font-semibold text-xs">© {{ toyear }}</span>
-      <a
+      <nuxt-link
         v-if="!$route.path.includes('/eng')"
-        href="/apropos"
+        to="/apropos"
         class="hover:underline"
-      >
-        <span class="col-white font-semibold indie text-sm">
+        ><span class="col-white font-semibold indie text-sm">
           A propos de PMM</span
-        >
-      </a>
-      <a v-else href="/eng/about" class="hover:underline">
-        <span class="col-white font-semibold indie text-sm"> About WMA</span>
-      </a>
+        ></nuxt-link
+      >
+      <nuxt-link v-else to="/eng/about" class="hover:underline">
+        <span class="col-white font-semibold indie text-sm">
+          About WMA</span
+        ></nuxt-link
+      >
     </div>
   </div>
 </template>
