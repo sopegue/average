@@ -11,7 +11,7 @@
         v-if="!hasData"
         class="flex mx-auto flex-col space-y-5 justify-center items-center"
       >
-        <div class="flex sm:flex-row flex-col sm:space-x-20">
+        <div class="flex sm:flex-row flex-col sm:space-x-20 sm:space-y-0 space-y-5">
           <div class="flex w-fit mx-auto items-center flex-col space-y-3">
             <div class="flex space-x-3">
               <div class="flex flex-col space-y-2 items-center">
