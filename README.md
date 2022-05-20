@@ -2,6 +2,10 @@
 
 Website where you can simulate the origin of your school's subjects average that match your total average
 
+# demo site
+
+[Demo here](https://mes-moyennes.netlify.app/).
+
 ## Build Setup
 
 ```bash
