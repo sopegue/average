@@ -1,4 +1,6 @@
-# blog
+# average
+
+Website where you can simulate the origin of your school's subjects average that match your total average
 
 ## Build Setup
 
