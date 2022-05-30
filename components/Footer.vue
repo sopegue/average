@@ -1,7 +1,7 @@
 <template>
   <div class="px-5 border-t py-3">
     <div class="flex flex-col space-y-2 items-center justify-center">
-      <span class="col-white font-semibold text-xs">© {{ toyear }} Xunita</span>
+      <span class="col-white font-semibold text-xs">© {{ toyear }}, Xunita</span>
       <nuxt-link
         v-if="!$route.path.includes('/eng')"
         to="/apropos"
